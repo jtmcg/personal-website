@@ -1,0 +1,62 @@
+html, body {
+    background-image: url('./assets/space-scape.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.app-container {
+    width: 100%;
+    height: 100%;
+}
+
+.navigation-spinner {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+}
+
+.banner-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 18%;
+}
+
+.banner {
+    position: relative;
+    font-family: orbitron;
+    text-align: center;
+    color: #e3e9ea;
+    margin: auto;
+}
+
+#title {
+    font-size: 96px;
+}
+
+#subtitle{
+    font-size: 48px;
+}
+
+#portfolio {
+    top: 6%;
+    left: 5%;
+}
+
+#design-process {
+    top: 8%;
+    right: 6%;
+}
+
+#work-life {
+    bottom: 8%;
+    left: 8%;
+}
+
+#personal-life {
+    bottom: 9%;
+    right: 10%;
+}

@@ -1,13 +1,11 @@
-body {
-    background-color: black;
-}
-
 .wheel-container {
     margin: auto;
     position: relative;
     text-align: center;
-    height: 500px;
-    width: 500px;
+    height: 300px;
+    width: 300px;
+    opacity: 0.25;
+    transition: 400ms;
 }
 
 .wheel-image-component {
@@ -18,32 +16,38 @@ body {
     height: 90%;
     width: 90%;
     margin: auto;
+    transition: 3s;
 }
 
 .wheel-text {
     position: absolute;
-    font-size: 96px;
-    left: 40%;
+    width: 600px;
+    font-size: 60px;
     top: 25%;
     font-family: orbitron;
     color: #E3E9Ea;
+    animation: glow 500ms ease-in-out infinite alternate;
+    animation-play-state: paused;
 }
 
-#wheel-image-component-one-hover {
+.wheel-image-component-one {
     animation-name: rotate-clockwise;
     animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     cursor: pointer;
+    animation-play-state: paused;
 }
 
-#wheel-image-component-two-hover {
+.wheel-image-component-two {
     animation-name: rotate-counterclockwise;
     animation-duration: 60s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     cursor: pointer;
+    animation-play-state: paused;
 }
+
 
 @keyframes rotate-clockwise {
     from {
@@ -58,5 +62,13 @@ body {
         transform: rotate(360deg);
     } to {
         transform: rotate(1deg);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #E3E9Ea;
+    } to {
+        text-shadow: 0 0 10px #E3E9Ea;
     }
 }

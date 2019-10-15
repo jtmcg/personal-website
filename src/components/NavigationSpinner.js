@@ -7,39 +7,59 @@ export default class NavigationSpinner extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            target: this.props.target,
             orientation: this.props.orientation,
             text: this.props.text,
-            mouseOver: false,
+            toggleAnimation: "paused",
+            wheelOneRotation: 0,
+            wheelTwoRotation: 0,
         }
     }
-    
-    mouseOver = () => {
-        const wheelOneDOM = document.getElementById("wheel-image-component-one");
-        const wheelTwoDOM = document.getElementById("wheel-image-component-two");
 
-        wheelOneDOM.id = "wheel-image-component-one-hover";
-        wheelTwoDOM.id = "wheel-image-component-two-hover";
+    componentDidMount() {
+        const wheelTextDOM = document.getElementById(this.state.text);
+        const orientation = this.state.orientation;
 
-        console.log("Mouse Over")
+        if (orientation === "right") {
+            wheelTextDOM.style.right = "40%";
+            wheelTextDOM.style.textAlign = "right";
+        } else if (orientation === "left") {
+            wheelTextDOM.style.left = "40%";
+            wheelTextDOM.style.textAlign = "left";
+        }
     }
 
-    mouseOut = () => {
-        const wheelOneDOM = document.getElementById("wheel-image-component-one-hover");
-        const wheelTwoDOM = document.getElementById("wheel-image-component-two-hover");
+    toggleAnimation = () => {
+        const wheelOneDOM = document.getElementById("wheel-image-component-one"+this.state.text);
+        const wheelTwoDOM = document.getElementById("wheel-image-component-two"+this.state.text);
+        const wheelTextDOM = document.getElementById(this.state.text);
+        const wheelContainerDOM = document.getElementById("wheel-container"+this.state.text);
+        var toggleAnimation = this.state.toggleAnimation;
 
-        wheelOneDOM.id = "wheel-image-component-one";
-        wheelTwoDOM.id = "wheel-image-component-two";
+        if (toggleAnimation === "paused") {
+            toggleAnimation = "running";
+            wheelContainerDOM.style.opacity = "1.0";
+            console.log("starting animation")
+        } else if (toggleAnimation === "running") {
+            toggleAnimation = "paused";
+            wheelContainerDOM.style.opacity = "0.25";
+            console.log("pausing animation")
+        }
 
-        console.log("Mouse Out")
+        wheelOneDOM.style.animationPlayState = toggleAnimation;
+        wheelTwoDOM.style.animationPlayState = toggleAnimation;
+        wheelTextDOM.style.animationPlayState = toggleAnimation;
+
+        this.setState({
+            toggleAnimation: toggleAnimation,
+        })
     }
 
     render() {
         return (
-            <div className="wheel-container" onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}>
-                <img src={wheeltwo} alt="wheel-two" className="wheel-image-component" id="wheel-image-component-two"  />
-                <img src={wheelone} alt="wheel-one" className="wheel-image-component" id="wheel-image-component-one"  />
-                <h1 className="wheel-text">{this.state.text}</h1>
+            <div className="wheel-container" id={"wheel-container"+this.state.text} onMouseOver={this.toggleAnimation} onMouseOut={this.toggleAnimation} onClick={this.props.onClick}>
+                <img src={wheeltwo} alt="wheel-two" className="wheel-image-component wheel-image-component-two" id={"wheel-image-component-two"+this.state.text}  />
+                <img src={wheelone} alt="wheel-one" className="wheel-image-component wheel-image-component-one" id={"wheel-image-component-one"+this.state.text}  />
+                <h1 className="wheel-text" id={this.state.text}>{this.state.text}</h1>
             </div>
         )
     }
