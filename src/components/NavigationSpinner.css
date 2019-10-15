@@ -1,19 +1,32 @@
+body {
+    background-color: black;
+}
+
 .wheel-container {
     margin: auto;
     position: relative;
     text-align: center;
+    height: 500px;
+    width: 500px;
 }
 
 .wheel-image-component {
     position: absolute;
+    top: 5%;
+    left: 5%;
     transform: inherit;
+    height: 90%;
+    width: 90%;
+    margin: auto;
 }
 
 .wheel-text {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%)
+    font-size: 96px;
+    left: 40%;
+    top: 25%;
+    font-family: orbitron;
+    color: #E3E9Ea;
 }
 
 #wheel-image-component-one-hover {

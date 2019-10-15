@@ -39,7 +39,7 @@ export default class NavigationSpinner extends Component {
             <div className="wheel-container" onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}>
                 <img src={wheeltwo} alt="wheel-two" className="wheel-image-component" id="wheel-image-component-two"  />
                 <img src={wheelone} alt="wheel-one" className="wheel-image-component" id="wheel-image-component-one"  />
-                <h1>{this.state.text}</h1>
+                <h1 className="wheel-text">{this.state.text}</h1>
             </div>
         )
     }
