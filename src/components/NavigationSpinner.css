@@ -1,0 +1,49 @@
+.wheel-container {
+    margin: auto;
+    position: relative;
+    text-align: center;
+}
+
+.wheel-image-component {
+    position: absolute;
+    transform: inherit;
+}
+
+.wheel-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#wheel-image-component-one-hover {
+    animation-name: rotate-clockwise;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    cursor: pointer;
+}
+
+#wheel-image-component-two-hover {
+    animation-name: rotate-counterclockwise;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    cursor: pointer;
+}
+
+@keyframes rotate-clockwise {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes rotate-counterclockwise {
+    from {
+        transform: rotate(360deg);
+    } to {
+        transform: rotate(1deg);
+    }
+}
