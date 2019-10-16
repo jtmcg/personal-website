@@ -74,6 +74,49 @@ html, body {
     justify-content: space-between;
 }
 
+.nav-wheel-container {
+    margin: auto;
+    position: relative;
+    text-align: center;
+    height: 300px;
+    width: 300px;
+}
+
+.nav-wheel-image-component {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    transform: inherit;
+    height: 90%;
+    width: 90%;
+    margin: auto;
+}
+
+.nav-wheel-text {
+    position: absolute;
+    text-align: left;
+    left: 50%;
+    width: 600px;
+    font-size: 60px;
+    top: 25%;
+    font-family: orbitron;
+    color: #E3E9Ea;
+}
+
+.nav-wheel-image-component-one {
+    animation-name: rotate-clockwise;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.nav-wheel-image-component-two {
+    animation-name: rotate-counterclockwise;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
 .nav-bar-current-page {
     position: sticky;
     margin-top: -130px;

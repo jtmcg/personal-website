@@ -41,8 +41,8 @@ export default class NavigationSpinner extends Component {
     }
 
     flashText = () => {
-        const wheelTextDOM = document.getElementById(this.state.text);
-
+        //const wheelTextDOM = document.getElementById(this.state.text);
+        // Create flashing animation
     }
 
     toggleAnimation = () => {

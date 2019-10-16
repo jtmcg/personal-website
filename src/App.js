@@ -5,13 +5,16 @@ import DesignProcess from './components/DesignProcess';
 import WorkLife from './components/WorkLife';
 import PersonalLife from './components/PersonalLife';
 
+import * as wheelone from './assets/wheel-one.png' ;
+import * as wheeltwo from './assets/wheel-two.png';
+
 import './App.css';
 
 export default class App extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      currentPage: "Home",
+      currentPage: "Portfolio",
       pages: ["Home", "Portfolio", "Design Process", "Work Life", "Personal Life"]
     }
   }
@@ -121,19 +124,18 @@ function NavBar(props) {
 
   pages = pages.map(page => {
     return(
-      <h3 className="nav-bar-page-item" id={"nav-bar-page-item"+page} onClick={() => props.changePage(page)}>{page}</h3>
+      <h3 className="nav-bar-page-item" id={"nav-bar-page-item"+page} onClick={() => props.changePage(page)} key={page}>{page}</h3>
     )
   })
 
   return(
     <div className="nav-bar-container">
       <div className="nav-bar-current-page">
-        <NavigationSpinner
-          orientation="left"
-          text={currentPage}
-          changePage={null}
-          isRunning={true}
-        />
+        <div className="nav-wheel-container" id="nav-wheel-container" onClick={() => console.log("nav bar wheel clicked") }>
+          <img src={wheeltwo} alt="nav-wheel-two" className="nav-wheel-image-component nav-wheel-image-component-two" />
+          <img src={wheelone} alt="nav-wheel-one" className="nav-wheel-image-component nav-wheel-image-component-one" />
+          <h1 className="nav-wheel-text" id="nav-wheel-text">{currentPage}</h1>
+        </div>
       </div>
       <div className="nav-bar-pages">
         {pages}

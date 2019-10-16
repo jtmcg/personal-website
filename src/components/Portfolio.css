@@ -1,0 +1,63 @@
+.portfolio-container {
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-header {
+    width: 70%;
+    margin: auto;
+}
+
+.app-title {
+    margin-left: 2%;
+}
+
+.app-preview-container {
+    width: 50%;
+    margin: auto;
+    margin-top: 2%;
+    border: solid #00bfe8d0 5px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px #e3e9ea;
+    background-color: #e3e9ea80;
+}
+
+.app-preview-window {
+    margin: auto;
+    width: 90%;
+}
+
+.app-preview-img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.app-preview-desc {
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 0.5%;
+}
+
+.preview-text {
+    justify-content: left;
+}
+
+.github-link {
+    justify-content: right;
+}
+
+.github-logo {
+    width: 6%;
+    height: auto;
+    display: inline-block; 
+    margin-left: auto;
+    margin-right: 0;   
+}
+
+.githup-text {
+    display: inline-block;
+}
+
+.preview-github {
+    justify-content: right;
+}
