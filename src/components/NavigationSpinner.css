@@ -26,8 +26,9 @@
     top: 25%;
     font-family: orbitron;
     color: #E3E9Ea;
-    animation: glow 500ms ease-in-out infinite alternate;
+    animation: glow 1000ms ease-in-out infinite alternate;
     animation-play-state: paused;
+    cursor: pointer;
 }
 
 .wheel-image-component-one {

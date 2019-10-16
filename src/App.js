@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import NavigationSpinner from './components/NavigationSpinner';
 import Portfolio from './components/Portfolio';
+import DesignProcess from './components/DesignProcess';
+import WorkLife from './components/WorkLife';
+import PersonalLife from './components/PersonalLife';
 
 import './App.css';
 
@@ -8,11 +11,12 @@ export default class App extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      currentPage: "home",
+      currentPage: "Home",
+      pages: ["Home", "Portfolio", "Design Process", "Work Life", "Personal Life"]
     }
   }
 
-  _changePage(newPage) {
+  _changePage = (newPage) => {
     this.setState({
       currentPage: newPage
     });
@@ -20,7 +24,7 @@ export default class App extends Component{
 
   render() {
     const currentPage = this.state.currentPage;
-    if (currentPage ==="home") {
+    if (currentPage ==="Home") {
       return(
         <div className="app-container">
           <div className="banner-container">
@@ -31,36 +35,109 @@ export default class App extends Component{
             <NavigationSpinner
               orientation="left"
               text="Portfolio"
-              onClick={() => this._changePage("portfolio")}
+              changePage={() => this._changePage("Portfolio")}
             />
           </div>
           <div className="navigation-spinner" id="design-process">
             <NavigationSpinner
               orientation="right"
               text="Design Process"
-              onClick={() => this._changePage("designProcess")}
+              changePage={() => this._changePage("Design Process")}
             />
           </div>
           <div className="navigation-spinner" id="work-life">
             <NavigationSpinner
               orientation="left"
               text="Work Life"
-              onClick={() => this._changePage("workLife")}
+              changePage={() => this._changePage("Work Life")}
             />
           </div>
           <div className="navigation-spinner" id="personal-life">
             <NavigationSpinner
               orientation="right"
               text="Personal Life"
-              onClick={() => this._changePage("personalLife")}
+              changePage={() => this._changePage("Personal Life")}
             />
           </div>
         </div>
       )
-    } else if (currentPage === "portfolio") {
+    } else if (currentPage === "Portfolio") {
       return (
-        <Portfolio/>
+        <div>
+          <NavBar
+            currentPage={this.state.currentPage}
+            pages={this.state.pages}
+            changePage={this._changePage}
+          />
+          <Portfolio/>
+        </div>
       )
+    } else if (currentPage === "Design Process") {
+      return (
+        <div>
+          <NavBar
+            currentPage={this.state.currentPage}
+            pages={this.state.pages}
+            changePage={this._changePage}
+          />
+          <DesignProcess/>
+        </div>
+      )
+    } else if (currentPage === "Work Life") {
+        return(
+          <div>
+            <NavBar
+              currentPage={this.state.currentPage}
+              pages={this.state.pages}
+              changePage={this._changePage}
+            />
+            <WorkLife/>
+          </div>
+        )
+    } else if (currentPage === "Personal Life") {
+        return (
+          <div>
+            <NavBar
+              currentPage={this.state.currentPage}
+              pages={this.state.pages}
+              changePage={this._changePage}
+            />
+            <PersonalLife/>
+          </div>
+        )
     }
   }
 };
+
+function NavBar(props) {
+  const currentPage = props.currentPage;
+  var pages = props.pages.filter(page => {
+    if (page === currentPage) {
+      return false
+    } else {
+      return true
+    }
+  })
+
+  pages = pages.map(page => {
+    return(
+      <h3 className="nav-bar-page-item" id={"nav-bar-page-item"+page} onClick={() => props.changePage(page)}>{page}</h3>
+    )
+  })
+
+  return(
+    <div className="nav-bar-container">
+      <div className="nav-bar-current-page">
+        <NavigationSpinner
+          orientation="left"
+          text={currentPage}
+          changePage={null}
+          isRunning={true}
+        />
+      </div>
+      <div className="nav-bar-pages">
+        {pages}
+      </div>
+    </div>
+  )
+}

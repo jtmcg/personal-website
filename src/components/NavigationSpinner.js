@@ -26,6 +26,23 @@ export default class NavigationSpinner extends Component {
             wheelTextDOM.style.left = "40%";
             wheelTextDOM.style.textAlign = "left";
         }
+
+        if (this.props.isRunning) {
+            document.getElementById("wheel-image-component-one"+this.state.text).style.animationPlayState = "running";
+            document.getElementById("wheel-image-component-two"+this.state.text).style.animationPlayState = "running";
+            document.getElementById("wheel-container"+this.state.text).style.opacity = "1.0";
+        }
+    }
+
+    checkToggle = () => {
+        if (!this.props.isRunning) {
+            this.toggleAnimation()
+        }
+    }
+
+    flashText = () => {
+        const wheelTextDOM = document.getElementById(this.state.text);
+
     }
 
     toggleAnimation = () => {
@@ -56,7 +73,7 @@ export default class NavigationSpinner extends Component {
 
     render() {
         return (
-            <div className="wheel-container" id={"wheel-container"+this.state.text} onMouseOver={this.toggleAnimation} onMouseOut={this.toggleAnimation} onClick={this.props.onClick}>
+            <div className="wheel-container" id={"wheel-container"+this.state.text} onMouseOver={this.checkToggle} onMouseOut={this.checkToggle} onClick={this.props.changePage}>
                 <img src={wheeltwo} alt="wheel-two" className="wheel-image-component wheel-image-component-two" id={"wheel-image-component-two"+this.state.text}  />
                 <img src={wheelone} alt="wheel-one" className="wheel-image-component wheel-image-component-one" id={"wheel-image-component-one"+this.state.text}  />
                 <h1 className="wheel-text" id={this.state.text}>{this.state.text}</h1>
