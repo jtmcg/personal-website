@@ -14,7 +14,7 @@ export default class App extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      currentPage: "Portfolio",
+      currentPage: "Design Process",
       pages: ["Home", "Portfolio", "Design Process", "Work Life", "Personal Life"]
     }
   }

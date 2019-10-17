@@ -53,12 +53,12 @@ html, body {
 }
 
 #work-life {
-    bottom: 8%;
+    bottom: 12%;
     left: 8%;
 }
 
 #personal-life {
-    bottom: 9%;
+    bottom: 14%;
     right: 10%;
 }
 
@@ -138,6 +138,7 @@ html, body {
 .nav-bar-page-item {
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     flex: 1;
     padding: 1%;

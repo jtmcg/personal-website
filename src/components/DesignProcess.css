@@ -1,0 +1,64 @@
+
+.design-process-container {
+    width: 96%;
+    margin: auto;
+}
+
+.design-process-header {
+    color: white;
+}
+
+.design-process-carousel-container {
+    width: 1200px;
+    height: 675px;
+    background-color: white;
+    margin: auto;
+    border: solid blue 5px;
+    position: relative;
+}
+
+.design-process-carousel-previous {
+    width: 720px;
+    height: 405px;
+    z-index: 500;
+    position: absolute;
+    top: 50%;
+    margin-top: -202.5px;
+    transition: 500ms;
+}
+
+.design-process-carousel-current {
+    width: 960px;
+    height: 540px;
+    z-index: 1000;
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    margin-top: -270px;
+    left: 50%;
+    margin-left: -480px;
+    transition: 500ms;
+}
+
+.design-process-carousel-next {
+    width: 720px;
+    height: 405px;
+    z-index: 500;
+    position: absolute;
+    top: 50%;
+    margin-top: -202.5px;
+    right: 0;
+    transition: 500ms;
+}
+
+#previous {
+    background-color: green;
+}
+
+#current {
+    background-color: red;
+}
+
+#next {
+    background-color: blue;
+}

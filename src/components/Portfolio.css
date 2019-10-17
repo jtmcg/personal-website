@@ -6,6 +6,24 @@
 .portfolio-header {
     width: 70%;
     margin: auto;
+    margin-top: 2%;
+    border: solid #00bfe8b0 5px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px #e3e9ea;
+    background-color: #e3e9ea80;
+
+}
+
+.portfolio-header-text {
+    padding: 1%;
+}
+
+.portfolio-section-header {
+    width: 70%;
+    margin: auto;
+    margin-top: 2%;
+    color: #e3e9ea;
+    font-size: 3em;
 }
 
 .app-title {
@@ -16,7 +34,7 @@
     width: 50%;
     margin: auto;
     margin-top: 2%;
-    border: solid #00bfe8d0 5px;
+    border: solid #00bfe8b0 5px;
     border-radius: 8px;
     box-shadow: 0px 0px 5px #e3e9ea;
     background-color: #e3e9ea80;
