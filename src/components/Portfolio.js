@@ -98,47 +98,6 @@ const education = [
 ]
 
 export default function Portfolio() {
-    
-    // const buildPortApps = reactApps.map(app => {
-    //     return(
-    //         <div className="app-preview-container" id={"container"+app.name} key={app.name}>
-    //             <h1 className="app-title">{app.name}</h1>
-    //             <div className="app-preview-window" id={"window"+app.name}>
-    //                 <a href={app.url}>
-    //                     <img src={app.img} className="app-preview-img" id={"preview-img"+app.name} alt={app.name} />
-    //                 </a>
-    //             </div>
-    //             <div className="app-preview-desc" id={"preview-desc"+app.name}>
-    //                 <p className="preview-text">{app.description}</p>
-    //                 <div className="preview-github">
-    //                     <a href={"https://github.com/jtmcg/"+app.githubExtension} className="github-link">
-    //                         <img src={require('../assets/github-logo.png')} alt="github logo" className="github-logo" />
-    //                         <p className="github-text">Github Repo</p>
-    //                     </a>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     )
-    // });
-
-    // const buildPortGames = games.map(game => {
-    //     return(
-    //         <div className="app-preview-container" id={"container"+game.name} key={game.name}>
-    //             <h1 className="app-title">{game.name}</h1>
-    //             <div className="app-preview-window" id={"window"+game.name}>
-    //                 <a href={game.url}>
-    //                     <img src={game.img} className="app-preview-img" id={"preview-img"+game.name} alt={game.name} />
-    //                 </a>
-    //             </div>
-    //             <div className="app-preview-desc" id={"preview-desc"+game.name}>
-    //                 <p className="preview-text">{game.description}</p>
-    //                 <div className="preview-company">
-    //                     <h3>{game.company}</h3>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     )
-    // });
 
     return(
         <div className="portfolio-container">
