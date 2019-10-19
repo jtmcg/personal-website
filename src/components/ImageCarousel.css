@@ -1,5 +1,5 @@
 :root {
-    --arrowColor: lightblue;
+    --arrowColor: #00bfe8;
 }
 
 #image-carousel-container {
@@ -15,9 +15,43 @@
     position: relative;
 }
 
+.slide-text-internal-interactable {
+    pointer-events: auto;
+}
+
+.slide-text {
+    color: #e3e9ea;
+    z-index: 2000;
+    position: absolute;
+    left: 11%;
+    transition: ease-in-out 500ms;
+    pointer-events: none;
+    padding: 0.5%;
+}
+
+#slide-header {
+    opacity: 1.0;
+    font-size: 2.5rem;
+    top: 11%;
+    text-shadow: 0px 0px 10px #111010;
+}
+
+#slide-text {
+    opacity: 0.1;
+    font-size: 1.0rem;
+    bottom: 12%;
+    background-color: #111010f0;
+    border-radius: 5px;
+    width: 77%;
+    max-height: 50%;
+    overflow: auto;
+}
+
 .image-carousel-slide {
     height: 100%;
     width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px 2px #e3e9ead0;
     transition: ease 500ms;
 }
 
@@ -34,6 +68,17 @@
     width: 100%;
     position: relative;
     visibility: hidden;
+}
+
+.carousel-invisible-hover-trigger {
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 1200;
+    opacity: 0.0;
+    cursor: pointer;
 }
 
 .image-carousel-slide-next {

@@ -21,8 +21,8 @@
 
 .wheel-text {
     position: absolute;
-    width: 600px;
-    font-size: 60px;
+    width: 300%;
+    font-size: 3rem;
     top: 25%;
     font-family: orbitron;
     color: #E3E9Ea;

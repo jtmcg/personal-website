@@ -4,9 +4,7 @@ import Portfolio from './components/Portfolio';
 import DesignProcess from './components/DesignProcess';
 import WorkLife from './components/WorkLife';
 import PersonalLife from './components/PersonalLife';
-
-import * as wheelone from './assets/wheel-one.png' ;
-import * as wheeltwo from './assets/wheel-two.png';
+import NavBar from './components/NavBar';
 
 import './App.css';
 
@@ -20,16 +18,26 @@ export default class App extends Component{
   }
 
   _changePage = (newPage) => {
-    this.setState({
-      currentPage: newPage
-    });
+
+    const appContainerDOM = document.getElementById("app-container");
+
+    appContainerDOM.style.opacity = 0;
+
+    setTimeout(() => {
+
+      this.setState({
+        currentPage: newPage
+      });
+
+      appContainerDOM.style.opacity = 1.0;
+    }, 500);
   }
 
   render() {
     const currentPage = this.state.currentPage;
     if (currentPage ==="Home") {
       return(
-        <div className="app-container">
+        <div className="app-container" id="app-container">
           <div className="banner-container">
             <h1 className="banner" id="title">J. Tyler McGoffin</h1>
             <h5 className="banner" id="subtitle">Designing the Future</h5>
@@ -72,7 +80,9 @@ export default class App extends Component{
             pages={this.state.pages}
             changePage={this._changePage}
           />
-          <Portfolio/>
+          <div className="app-container" id="app-container">
+            <Portfolio/>
+          </div>
         </div>
       )
     } else if (currentPage === "Design Process") {
@@ -83,7 +93,9 @@ export default class App extends Component{
             pages={this.state.pages}
             changePage={this._changePage}
           />
-          <DesignProcess/>
+          <div className="app-container" id="app-container">
+            <DesignProcess/>
+          </div>
         </div>
       )
     } else if (currentPage === "Work Life") {
@@ -94,7 +106,9 @@ export default class App extends Component{
               pages={this.state.pages}
               changePage={this._changePage}
             />
-            <WorkLife/>
+            <div className="app-container" id="app-container">
+              <WorkLife/>
+            </div>
           </div>
         )
     } else if (currentPage === "Personal Life") {
@@ -105,41 +119,11 @@ export default class App extends Component{
               pages={this.state.pages}
               changePage={this._changePage}
             />
-            <PersonalLife/>
+            <div className="app-container" id="app-container">
+              <PersonalLife/>
+            </div>
           </div>
         )
     }
   }
 };
-
-function NavBar(props) {
-  const currentPage = props.currentPage;
-  var pages = props.pages.filter(page => {
-    if (page === currentPage) {
-      return false
-    } else {
-      return true
-    }
-  })
-
-  pages = pages.map(page => {
-    return(
-      <h3 className="nav-bar-page-item" id={"nav-bar-page-item"+page} onClick={() => props.changePage(page)} key={page}>{page}</h3>
-    )
-  })
-
-  return(
-    <div className="nav-bar-container">
-      <div className="nav-bar-current-page">
-        <div className="nav-wheel-container" id="nav-wheel-container" onClick={() => console.log("nav bar wheel clicked") }>
-          <img src={wheeltwo} alt="nav-wheel-two" className="nav-wheel-image-component nav-wheel-image-component-two" />
-          <img src={wheelone} alt="nav-wheel-one" className="nav-wheel-image-component nav-wheel-image-component-one" />
-          <h1 className="nav-wheel-text" id="nav-wheel-text">{currentPage}</h1>
-        </div>
-      </div>
-      <div className="nav-bar-pages">
-        {pages}
-      </div>
-    </div>
-  )
-}

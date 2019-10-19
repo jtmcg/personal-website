@@ -1,9 +1,10 @@
 import React from 'react';
+import UnderConstruction from './UnderConstuction';
 
 export default function WorkLife(props) {
     return (
-        <div>
-           <h1>Work Life</h1> 
-        </div>
+        <UnderConstruction
+            pageName="Work Life"
+        />
     )
 }
