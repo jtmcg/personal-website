@@ -23,7 +23,7 @@ export default class NavigationSpinner extends Component {
             wheelTextDOM.style.right = "40%";
             wheelTextDOM.style.textAlign = "right";
         } else if (orientation === "left") {
-            wheelTextDOM.style.left = "40%";
+            wheelTextDOM.style.left = "47%";
             wheelTextDOM.style.textAlign = "left";
         }
 

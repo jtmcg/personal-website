@@ -2,8 +2,8 @@
     margin: auto;
     position: relative;
     text-align: center;
-    height: 300px;
-    width: 300px;
+    height: 15rem;
+    width: 15rem;
     opacity: 0.25;
     transition: 400ms;
 }
@@ -32,6 +32,8 @@
 }
 
 .wheel-image-component-one {
+    height: 100%;
+    width: 100%;
     animation-name: rotate-clockwise;
     animation-duration: 40s;
     animation-iteration-count: infinite;
@@ -41,6 +43,8 @@
 }
 
 .wheel-image-component-two {
+    height: 100%;
+    width: 100%;
     animation-name: rotate-counterclockwise;
     animation-duration: 60s;
     animation-iteration-count: infinite;

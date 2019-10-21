@@ -12,7 +12,7 @@ export default class App extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      currentPage: "Design Process",
+      currentPage: "Home",
       pages: ["Home", "Portfolio", "Design Process", "Work Life", "Personal Life"]
     }
   }
@@ -42,33 +42,35 @@ export default class App extends Component{
             <h1 className="banner" id="title">J. Tyler McGoffin</h1>
             <h5 className="banner" id="subtitle">Designing the Future</h5>
           </div>
-          <div className="navigation-spinner" id="portfolio">
-            <NavigationSpinner
-              orientation="left"
-              text="Portfolio"
-              changePage={() => this._changePage("Portfolio")}
-            />
-          </div>
-          <div className="navigation-spinner" id="design-process">
-            <NavigationSpinner
-              orientation="right"
-              text="Design Process"
-              changePage={() => this._changePage("Design Process")}
-            />
-          </div>
-          <div className="navigation-spinner" id="work-life">
-            <NavigationSpinner
-              orientation="left"
-              text="Work Life"
-              changePage={() => this._changePage("Work Life")}
-            />
-          </div>
-          <div className="navigation-spinner" id="personal-life">
-            <NavigationSpinner
-              orientation="right"
-              text="Personal Life"
-              changePage={() => this._changePage("Personal Life")}
-            />
+          <div className="navigation-spinners-container">
+            <div className="navigation-spinner" id="portfolio">
+              <NavigationSpinner
+                orientation="left"
+                text="Portfolio"
+                changePage={() => this._changePage("Portfolio")}
+              />
+            </div>
+            <div className="navigation-spinner" id="design-process">
+              <NavigationSpinner
+                orientation="right"
+                text="Design Process"
+                changePage={() => this._changePage("Design Process")}
+              />
+            </div>
+            <div className="navigation-spinner" id="work-life">
+              <NavigationSpinner
+                orientation="left"
+                text="Work Life"
+                changePage={() => this._changePage("Work Life")}
+              />
+            </div>
+            <div className="navigation-spinner" id="personal-life">
+              <NavigationSpinner
+                orientation="right"
+                text="Personal Life"
+                changePage={() => this._changePage("Personal Life")}
+              />
+            </div>
           </div>
         </div>
       )

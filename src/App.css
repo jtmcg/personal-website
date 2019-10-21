@@ -1,9 +1,6 @@
 html, body {
-    background-image: url('./assets/space-scape.png');
-    background-size: contain 100%; 
-    background-repeat: no-repeat;
-    height: inherit;
-    width: inherit;
+    background-image: url('./assets/starscape-background-stars.png');
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
     font-family: orbitron;
@@ -18,19 +15,16 @@ p {
     width: 100%;
     height: 100%;
     transition: 500ms;
-}
-
-.navigation-spinner {
-    height: 200px;
-    width: 200px;
-    position: absolute;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    perspective: 8px;
+    perspective-origin: 0%;
+    background-image: url('./assets/starscape-foreground-stars.png');
 }
 
 .banner-container {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 40%;
+    flex: 1;
+    padding-top: 10%;
 }
 
 .banner {
@@ -49,22 +43,11 @@ p {
     font-size: 2.5rem;
 }
 
-#portfolio {
-    top: 6%;
-    left: 5%;
+.navigation-spinners-container {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#design-process {
-    top: 8%;
-    right: 10%;
-}
-
-#work-life {
-    bottom: 12%;
-    left: 8%;
-}
-
-#personal-life {
-    bottom: 14%;
-    right: 10%;
+.navigation-spinner {
+    flex: 50%;
 }
