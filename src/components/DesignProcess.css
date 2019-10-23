@@ -2,6 +2,7 @@
 .design-process-container {
     width: 96%;
     margin: auto;
+    transition: 500ms;
 }
 
 .design-process-header {

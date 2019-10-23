@@ -7,6 +7,7 @@ import PersonalLife from './components/PersonalLife';
 import NavBar from './components/NavBar';
 
 import './App.css';
+import './components/NavBar.css';
 
 export default class App extends Component{
   constructor(props) {
@@ -35,9 +36,10 @@ export default class App extends Component{
 
   render() {
     const currentPage = this.state.currentPage;
-    if (currentPage ==="Home") {
-      return(
-        <div className="app-container" id="app-container">
+    var pageBuild = null;
+    var navBar = null;
+    if (currentPage === "Home") {
+      pageBuild = <React.Fragment>
           <div className="banner-container">
             <h1 className="banner" id="title">J. Tyler McGoffin</h1>
             <h5 className="banner" id="subtitle">Designing the Future</h5>
@@ -72,60 +74,34 @@ export default class App extends Component{
               />
             </div>
           </div>
-        </div>
-      )
-    } else if (currentPage === "Portfolio") {
-      return (
-        <div>
-          <NavBar
-            currentPage={this.state.currentPage}
-            pages={this.state.pages}
-            changePage={this._changePage}
-          />
-          <div className="app-container" id="app-container">
-            <Portfolio/>
-          </div>
-        </div>
-      )
-    } else if (currentPage === "Design Process") {
-      return (
-        <div>
-          <NavBar
-            currentPage={this.state.currentPage}
-            pages={this.state.pages}
-            changePage={this._changePage}
-          />
-          <div className="app-container" id="app-container">
-            <DesignProcess/>
-          </div>
-        </div>
-      )
-    } else if (currentPage === "Work Life") {
-        return(
-          <div>
-            <NavBar
-              currentPage={this.state.currentPage}
-              pages={this.state.pages}
-              changePage={this._changePage}
-            />
-            <div className="app-container" id="app-container">
-              <WorkLife/>
-            </div>
-          </div>
-        )
-    } else if (currentPage === "Personal Life") {
-        return (
-          <div>
-            <NavBar
-              currentPage={this.state.currentPage}
-              pages={this.state.pages}
-              changePage={this._changePage}
-            />
-            <div className="app-container" id="app-container">
-              <PersonalLife/>
-            </div>
-          </div>
-        )
+        </React.Fragment>
+
+    } else {
+      navBar = <NavBar
+                  currentPage={this.state.currentPage}
+                  pages={this.state.pages}
+                  changePage={this._changePage}
+                />
+
+      if (currentPage === "Portfolio") {
+        pageBuild = <Portfolio/>
+      } else if (currentPage === "Design Process") {
+        pageBuild = <DesignProcess/>
+      } else if (currentPage === "Work Life") {
+          pageBuild = <WorkLife/>
+      } else if (currentPage === "Personal Life") {
+          pageBuild = <PersonalLife/>
+      }
     }
-  }
-};
+
+    return(
+      <div className="app-container" id="app-container">
+        {/*<div className="parallax-image parallax-midground-nebula" alt="parallax nebula" />
+        <div className="parallax-image parallax-foreground-stars" alt="parallax foreground" />
+      */}
+        {navBar}
+        {pageBuild}
+      </div>
+    )
+  };
+}

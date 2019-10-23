@@ -20,7 +20,7 @@ export default function NavBar(props) {
     })
   
     return(
-      <div className="nav-bar-container">
+      <div className="nav-bar-container" id="nav-bar-container">
         <div className="nav-bar-current-page">
           <div className="nav-wheel-container" id="nav-wheel-container" onClick={() => console.log("nav bar wheel clicked") }>
             <img src={wheeltwo} alt="nav-wheel-two" className="nav-wheel-image-component nav-wheel-image-component-two" />

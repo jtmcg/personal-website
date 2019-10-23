@@ -19,7 +19,7 @@ const reactApps = [
         company: "self",
         githubExtension: "dndspellsearcher",
         img: dndSpellSearcherScreenshot,
-        description: "Uses the API Dnd5eapi.co",
+        description: "A Web App built in React to filter spells from Dungeons and Dragons 5th edition. You may filter spells by class, level, and type. It uses the API Dnd5eapi.co",
     },
 
     {
@@ -28,7 +28,7 @@ const reactApps = [
         company: "self",
         githubExtension: "rithmchallenge",
         img: icanhazdadjokes,
-        description: "Uses the API https://icanhazdadjoke.com/api and a Firebase database to store votes",
+        description: "A Web App built in React that displays random jokes from the API https://icanhazdadjoke.com/api. It utilizes a Firebase database to store likes and dislikes voted on each joke, and displays the highest and lowest rated jokes.",
     },
 
     {
@@ -37,7 +37,7 @@ const reactApps = [
         company: "self",
         githubExtension: "skaleproject",
         img: skaleproject,
-        description: "The project I used to first learn React. Uses the API https://randomuser.me/",
+        description: "The project I used to first learn React. It emulates a simple social media feed by calling up random users from the API https://randomuser.me/. I also experimented with page rendering here. If you click on a random user, it displays a simple \"portfolio\" for that user.",
     },
 
     {
@@ -46,7 +46,7 @@ const reactApps = [
         company: "self",
         githubExtension: "component-library",
         img: componentLibrary,
-        description: "The ever growing library of React Components I've made for various apps and practice."
+        description: "The ever growing library of React Components I've made for various apps and practice. I do my best to keep it up to date."
     },
 
     {
@@ -55,7 +55,7 @@ const reactApps = [
         company: "self",
         githubExtension: "personal-website",
         img: personalWebsite,
-        description: "My website and portfolio, built in React"
+        description: "This website/portfolio you are perusing now was built by me in React."
     },
 
 ];
@@ -66,7 +66,7 @@ const games = [
         url: "https://www.interregnumbg.com",
         company: "Designed by J. Tyler McGoffin",
         img: interregnum,
-        description: "The game I'm currently designing: a 4X Space Epic with a Deck-building sub-theme."
+        description: "The board game I'm currently designing: a 4X Space Epic with a Deck-building sub-theme."
     },
     
     {
@@ -93,16 +93,22 @@ const education = [
         company: "self",
         githubExtension: "game-design-course-code",
         img: gameDesignCourse,
-        description: "My 3-week Game Design Course in Python using Pygame"
+        description: "My 3-week Game Design Course in Python using Pygame. Most recently, I have taught this course for Stanford's PreCollegiate Studies - both on Stanford's campus and abroad."
     },
 ]
+
+const headerText = {
+    headerTitle: "Web Apps, Games, and More...",
+    headerText: <React.Fragment>Below is a sample of various projects I have completed. To see more information about the project, or to see it in action, click on the image. All code samples are available on my github page: <a href="https://www.github.com/jtmcg" target="_blank" rel="noopener noreferrer">https://www.github.com/jtmcg</a></React.Fragment>,
+}
 
 export default function Portfolio() {
 
     return(
         <div className="portfolio-container">
             <div className="portfolio-header">
-                <h1 className="portfolio-header-text">Header Text Placeholder</h1>
+                <h1 className="portfolio-header-title">{headerText.headerTitle}</h1>
+                <p className="portfolio-header-text">{headerText.headerText}</p>
             </div>
           <h1 className="portfolio-section-header">Web and React Apps</h1>
           {buildPortComponents(reactApps)}
@@ -124,7 +130,7 @@ const buildPortComponents = (projects) => {
             github = () => {
                 return(
                     <div className="preview-github">
-                        <a href={"https://github.com/jtmcg/"+project.githubExtension} className="github-link">
+                        <a href={"https://github.com/jtmcg/"+project.githubExtension} target="_blank" rel="noopener noreferrer" className="github-link">
                             <img src={require('../assets/github-logo.png')} alt="github logo" className="github-logo" />
                             <p className="github-text">Github Repo</p>
                         </a>

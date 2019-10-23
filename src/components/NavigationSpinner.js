@@ -55,11 +55,9 @@ export default class NavigationSpinner extends Component {
         if (toggleAnimation === "paused") {
             toggleAnimation = "running";
             wheelContainerDOM.style.opacity = "1.0";
-            console.log("starting animation")
         } else if (toggleAnimation === "running") {
             toggleAnimation = "paused";
             wheelContainerDOM.style.opacity = "0.25";
-            console.log("pausing animation")
         }
 
         wheelOneDOM.style.animationPlayState = toggleAnimation;
