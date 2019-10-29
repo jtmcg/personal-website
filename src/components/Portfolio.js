@@ -15,7 +15,7 @@ import * as rktc from '../assets/rktc.png';
 const reactApps = [
     {
         name: "D&D Spell Searcher App",
-        url: "http://www.jtmcgoffin.com/dndspellsearcher",
+        url: "http://dndspellsearcher.jtmcgoffin.com/",
         company: "self",
         githubExtension: "dndspellsearcher",
         img: dndSpellSearcherScreenshot,
@@ -24,7 +24,7 @@ const reactApps = [
 
     {
         name: "I Can Haz Dad Jokes?",
-        url: "http://www.jtmcgoffin.com/icanhazdadjokes",
+        url: "http://icanhazdadjokes.jtmcgoffin.com/",
         company: "self",
         githubExtension: "rithmchallenge",
         img: icanhazdadjokes,
@@ -33,7 +33,7 @@ const reactApps = [
 
     {
         name: "Social Media Style App",
-        url: "http://www.jtmcgoffin.com/socialmediaapp",
+        url: "http://socialmediaapp.jtmcgoffin.com/",
         company: "self",
         githubExtension: "skaleproject",
         img: skaleproject,
@@ -42,7 +42,7 @@ const reactApps = [
 
     {
         name: "React Component Library",
-        url: "http://www.jtmcgoffin.com/reactcomponentlibrary",
+        url: "http://reactcomponentlibrary.jtmcgoffin.com/",
         company: "self",
         githubExtension: "component-library",
         img: componentLibrary,
@@ -89,7 +89,7 @@ const games = [
 const education = [
     {
         name: "Game Design Coding Course",
-        url: "http://www.jtmcgoffin.com/gamedesigncourse",
+        url: "http://gamedesigncourse.jtmcgoffin.com/",
         company: "self",
         githubExtension: "game-design-course-code",
         img: gameDesignCourse,
