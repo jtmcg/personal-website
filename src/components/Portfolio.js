@@ -89,7 +89,7 @@ const games = [
 const education = [
     {
         name: "Game Design Coding Course",
-        url: "http://gamedesigncourse.jtmcgoffin.com/",
+        url: "https://summerinstitutes.spcs.stanford.edu/courses/2019/game-design",
         company: "self",
         githubExtension: "game-design-course-code",
         img: gameDesignCourse,
@@ -145,7 +145,7 @@ const buildPortComponents = (projects) => {
             <div className="app-preview-container" id={"container"+project.name} key={project.name}>
                 <h1 className="app-title">{project.name}</h1>
                 <div className="app-preview-window" id={"window"+project.name}>
-                    <a href={project.url}>
+                    <a href={project.url} target="_blank" rel="noopener noreferrer">
                         <img src={project.img} className="app-preview-img" id={"preview-img"+project.name} alt={project.name} />
                     </a>
                 </div>
