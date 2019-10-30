@@ -1,3 +1,4 @@
+
 :root {
     --arrowColor: #00bfe8;
 }
@@ -6,6 +7,7 @@
     height: 60%;
     margin: auto;
     width: 80%;
+    margin-top: 1%;
 }
 
 .image-carousel {
@@ -22,29 +24,31 @@
 .slide-text {
     color: #e3e9ea;
     z-index: 2000;
-    position: absolute;
-    left: 11%;
+    font-size: 12px;
     transition: ease-in-out 500ms;
-    pointer-events: none;
-    padding: 0.5%;
 }
 
 #slide-header {
+    position: absolute;
     opacity: 1.0;
-    font-size: 2.5rem;
-    top: 11%;
+    max-width: 78%;
+    font-size: 3.0vw;
+    margin: auto;
+    margin-top: 2%;
+    top: 8%;
+    left: 12%;
     text-shadow: 0px 0px 10px #111010;
+    pointer-events: none;
 }
 
 #slide-text {
-    opacity: 0.1;
-    font-size: 1.0rem;
-    bottom: 12%;
+    font-size: 12px;
     background-color: #111010f0;
     border-radius: 5px;
     width: 77%;
-    max-height: 50%;
-    overflow: auto;
+    margin: auto;
+    margin-bottom: 1%;
+    padding: 1%;
 }
 
 .image-carousel-slide {

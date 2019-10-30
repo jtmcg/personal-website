@@ -4,7 +4,7 @@ import './Portfolio.css';
 import * as dndSpellSearcherScreenshot from '../assets/dnd-spell-searcher-screenshot.png';
 import * as icanhazdadjokes from '../assets/icanhazdadjokes-screenshot.png';
 import * as skaleproject from '../assets/skaleproject.png';
-import * as componentLibrary from '../assets/component-library.png';
+//import * as componentLibrary from '../assets/component-library.png';
 import * as gameDesignCourse from '../assets/game-design-course.png';
 import * as personalWebsite from '../assets/personal-website.png';
 import * as interregnum from '../assets/interregnum.png';
@@ -40,14 +40,14 @@ const reactApps = [
         description: "The project I used to first learn React. It emulates a simple social media feed by calling up random users from the API https://randomuser.me/. I also experimented with page rendering here. If you click on a random user, it displays a simple \"portfolio\" for that user.",
     },
 
-    {
+    /*{
         name: "React Component Library",
         url: "http://reactcomponentlibrary.jtmcgoffin.com/",
         company: "self",
         githubExtension: "component-library",
         img: componentLibrary,
         description: "The ever growing library of React Components I've made for various apps and practice. I do my best to keep it up to date."
-    },
+    },*/
 
     {
         name: "This Website",

@@ -48,12 +48,12 @@ export default function Skills(props) {
         const title = skillSet.title;
         const list = skillSet.list;
         return (
-            <div className="skill-container">
+            <div className="skill-container" key={title}>
                 <h1 className="skill-type">{title}</h1>
                 <div className="skill-list-container">
                     <SkillList
                         list={list}
-                        key={title}
+                        key={title+"-list"}
                     />
                 </div>
             </div>

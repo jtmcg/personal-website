@@ -21,7 +21,7 @@ export default function NavBar(props) {
     })
   
     return (
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark nav-bar-container">
         <div className="navbar-brand">
           <div className="nav-bar-current-page">
            <div className="nav-wheel-container" id="nav-wheel-container" onClick={() => console.log("nav bar wheel clicked") }>
@@ -32,12 +32,12 @@ export default function NavBar(props) {
           </div>
         </div>
 
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button className="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
         </button>
       
-        <div id="navbarNavDropdown" class="navbar-collapse collapse ml-auto">
-          <ul class="navbar-nav ml-auto nav-bar-pages">
+        <div id="navbarNavDropdown" className="navbar-collapse collapse ml-auto">
+          <ul className="navbar-nav ml-auto nav-bar-pages">
             {pages}
           </ul>
         </div>

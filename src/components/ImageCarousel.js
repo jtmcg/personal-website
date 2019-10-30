@@ -151,22 +151,17 @@ export default class ImageCarousel extends Component {
 
     onMouseOver = () => {
         const slideHeaderDOM = document.getElementById("slide-header");
-        const slideTextDOM = document.getElementById("slide-text");
-
         slideHeaderDOM.style.opacity = 1.0;
-        slideTextDOM.style.opacity = 1.0;
+        console.log("mouse over")
+
     }
 
     onMouseOut = () => {
-
-        const slideTextDOM = document.getElementById("slide-text");
-        slideTextDOM.style.opacity = 0.1;
-
         if (this.state.currentImageIndex !== 0) {
             const slideHeaderDOM = document.getElementById("slide-header");
-
             slideHeaderDOM.style.opacity = 0.1;
         };
+        console.log("mouse out")
     }
 
     render() {
@@ -212,24 +207,26 @@ export default class ImageCarousel extends Component {
         })
 
         return (
-            <div id="image-carousel-container">
-                <div className="image-carousel">
-                    <Arrow 
-                        direction="left"
-                        clickFunction={ this.previousSlide }
-                        glyph="&#9664;"/>
+            <div>
+                <div id="image-carousel-container">
                     <div className="image-carousel">
-                        <h1 className="slide-text" id="slide-header">{ currentHeader }</h1>
-                        <img src={ this.state.imgs[0] } className="carousel-invisible-hover-trigger" onClick={ this.nextSlide } onMouseOver={ this.onMouseOver } onMouseOut={ this.onMouseOut } alt="invisible placeholder"/>
-                        <img src={this.state.imgs[0]} className="carousel-size-placeholder" alt="placeholder" />
-                        { slides }
-                        <div className="slide-text" id="slide-text">{ currentText }</div>
+                        <Arrow 
+                            direction="left"
+                            clickFunction={ this.previousSlide }
+                            glyph="&#9664;"/>
+                        <div className="image-carousel">
+                            <h1 className="slide-text" id="slide-header">{ currentHeader }</h1>
+                            <img src={ this.state.imgs[0] } className="carousel-invisible-hover-trigger" onClick={ this.nextSlide } onMouseOver={ this.onMouseOver } onMouseOut={ this.onMouseOut} alt="invisible placeholder"/>
+                            <img src={this.state.imgs[0]} className="carousel-size-placeholder" alt="placeholder" />
+                            { slides }
+                        </div>
+                        <Arrow  
+                            direction="right"
+                            clickFunction={ this.nextSlide }
+                            glyph="&#9654;"/>
                     </div>
-                    <Arrow  
-                        direction="right"
-                        clickFunction={ this.nextSlide }
-                        glyph="&#9654;"/>
                 </div>
+                <div className="slide-text" id="slide-text">{ currentText }</div>
             </div>
         )
     }
