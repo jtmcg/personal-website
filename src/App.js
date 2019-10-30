@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import NavigationSpinner from './components/NavigationSpinner';
 import Portfolio from './components/Portfolio';
 import DesignProcess from './components/DesignProcess';
-import WorkLife from './components/WorkLife';
+import Skills from './components/Skills';
 import PersonalLife from './components/PersonalLife';
 import NavBar from './components/NavBar';
 
@@ -14,7 +14,7 @@ export default class App extends Component{
     super(props);
     this.state = {
       currentPage: "Home",
-      pages: ["Home", "Portfolio", "Design Process", "Work Life", "Personal Life"]
+      pages: ["Home", "Portfolio", "Design Process", "Skills", "Personal Life"]
     }
   }
 
@@ -59,11 +59,11 @@ export default class App extends Component{
                 changePage={() => this._changePage("Design Process")}
               />
             </div>
-            <div className="navigation-spinner" id="work-life">
+            <div className="navigation-spinner" id="skills">
               <NavigationSpinner
                 orientation="left"
-                text="Work Life"
-                changePage={() => this._changePage("Work Life")}
+                text="Skills"
+                changePage={() => this._changePage("Skills")}
               />
             </div>
             <div className="navigation-spinner" id="personal-life">
@@ -87,8 +87,8 @@ export default class App extends Component{
         pageBuild = <Portfolio/>
       } else if (currentPage === "Design Process") {
         pageBuild = <DesignProcess/>
-      } else if (currentPage === "Work Life") {
-          pageBuild = <WorkLife/>
+      } else if (currentPage === "Skills") {
+          pageBuild = <Skills/>
       } else if (currentPage === "Personal Life") {
           pageBuild = <PersonalLife/>
       }
