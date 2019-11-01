@@ -14,6 +14,22 @@ p {
     font-size: 20px;
 }
 
+a:link {
+    color: #008AA8;
+  }
+  
+a:visited {
+    color: #993322;
+  }
+  
+a:hover {
+    color: #005366;
+  }
+  
+a:active {
+    color: #882211;
+  }
+
 .app-container {
     width: 100%;
     height: 100%;
@@ -75,6 +91,6 @@ p {
 }
 
 .navigation-spinner {
-    width: 600px;
+    width: 650px;
     margin: auto;
 }

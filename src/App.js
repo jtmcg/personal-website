@@ -54,7 +54,7 @@ export default class App extends Component{
             </div>
             <div className="navigation-spinner" id="design-process">
               <NavigationSpinner
-                orientation="right"
+                orientation="left"
                 text="Design Process"
                 changePage={() => this._changePage("Design Process")}
               />
@@ -68,7 +68,7 @@ export default class App extends Component{
             </div>
             <div className="navigation-spinner" id="personal-life">
               <NavigationSpinner
-                orientation="right"
+                orientation="left"
                 text="Personal Life"
                 changePage={() => this._changePage("Personal Life")}
               />
