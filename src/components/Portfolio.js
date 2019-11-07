@@ -20,7 +20,7 @@ const reactApps = [
         company: "self",
         githubExtension: "training-portal",
         img: trainingPortalScreenshot,
-        description: "A Web App built in React to filter spells from Dungeons and Dragons 5th edition. You may filter spells by class, level, and type. It uses the API Dnd5eapi.co",
+        description: "A Web App built to simulate a Training Portal where you can view trainings, add and edit trainings, and search for trainings. There is an explanation of the design process of this app in the README.me on the github complete with screenshots to show you how I approach problems like these.",
     },
     {
         name: "D&D Spell Searcher App",
