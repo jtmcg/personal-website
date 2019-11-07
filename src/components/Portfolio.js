@@ -5,6 +5,7 @@ import * as dndSpellSearcherScreenshot from '../assets/dnd-spell-searcher-screen
 import * as icanhazdadjokes from '../assets/icanhazdadjokes-screenshot.png';
 import * as skaleproject from '../assets/skaleproject.png';
 //import * as componentLibrary from '../assets/component-library.png';
+import * as trainingPortalScreenshot from '../assets/training-portal-screenshot.png';
 import * as gameDesignCourse from '../assets/game-design-course.png';
 import * as personalWebsite from '../assets/personal-website.png';
 import * as interregnum from '../assets/interregnum.png';
@@ -13,6 +14,14 @@ import * as rktc from '../assets/rktc.png';
 
 
 const reactApps = [
+    {
+        name: "Training Portal",
+        url: "http://trainingportal.jtmcgoffin.com/",
+        company: "self",
+        githubExtension: "training-portal",
+        img: trainingPortalScreenshot,
+        description: "A Web App built in React to filter spells from Dungeons and Dragons 5th edition. You may filter spells by class, level, and type. It uses the API Dnd5eapi.co",
+    },
     {
         name: "D&D Spell Searcher App",
         url: "http://dndspellsearcher.jtmcgoffin.com/",
